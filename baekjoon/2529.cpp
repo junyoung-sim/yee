@@ -24,6 +24,35 @@ void func(int i, int n) {
     }
 
     if(valid && i == N) {
+        bool is_max = false, is_min = false;
+        for(int k = 0; k < seq.size(); k++) {
+            if(seq[k] != max_seq[k]) {
+                is_max = (seq[k] > max_seq[k]);
+                break;
+            }
+        }
+        for(int k = 0; k < seq.size(); k++) {
+            if(seq[k] != min_seq[k]) {
+                is_min = (seq[k] < min_seq[k]);
+                break;
+            }
+        }
+
+        std::string val = "";
+        for(int &_n: seq)
+            val += std::to_string(_n);
+
+        if(is_max) {
+            max_ans = val;
+            for(int k = 0; k < seq.size(); k++)
+                max_seq[k] = seq[k];
+        }
+        if(is_min) {
+            min_ans = val;
+            for(int k = 0; k < seq.size(); k++)
+                min_seq[k] = seq[k];
+        }
+
         return;
     }
     else if(valid && i != N) {
