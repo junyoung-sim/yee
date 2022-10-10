@@ -21,15 +21,30 @@ void func(int i, int n) {
         int sum = 0;
 
         for(int c = 0; c < M; c++) {
-            
+            int r = 0;
+            while(r < N) {
+                while(r < N && cut[r][c])
+                    num += std::to_string(map[r++][c]);
+                if(num != "")
+                    sum += std::stoi(num);
+                num = "";
+                r++;
+            }
         }
 
         for(int r = 0; r < N; r++) {
-            
+            int c = 0;
+            while(c < M) {
+                while(c < M && !cut[r][c])
+                    num += std::to_string(map[r][c++]);
+                if(num != "")
+                    sum += std::stoi(num);
+                num = "";
+                c++;
+            }
         }
 
         ans = std::max(sum, ans);
-
         return;
     }
 
