@@ -11,21 +11,25 @@ int main()
 {
     std::cin >> N;
     arr.resize(N);
-    for(int i = 0; i < N; i++)
+    for(int i = 0; i < N; i++) {
         std::cin >> arr[i];
-
-    std::vector<int> dp(N);
-    dp[0] = arr[0];
-    dp[1] = std::max(arr[1], std::max(dp[0], dp[0] + arr[1]));
-
-
-    std::cout << dp[0] << " " << dp[1] << " ";
-    for(int i = 2; i < N; i++) {
-        dp[i] = std::max(arr[i], std::max(std::max(dp[i-1], dp[i-1] + arr[i]), std::max(dp[i-2], dp[i-2] + arr[i])));
-        std::cout << dp[i] << " ";
+        ans = std::max(arr[i], ans);
     }
 
-    std::cout << "\n";
+    std::vector<std::vector<int>> dp(N, std::vector<int>(2,0));
+
+    for(int i = 0; i < N; i++) {
+        dp[i][0] = arr[i];
+        dp[i][1] = 0;
+
+        if(i != 0) {
+            dp[i][0] = std::max(dp[i-1][0] + arr[i], arr[i]);
+            dp[i][1] = std::max(dp[i-1][0], dp[i-1][1] + arr[i]);
+            ans = std::max(std::max(dp[i][0], dp[i][1]), ans);
+        }
+    }
+
+    std::cout << ans << "\n";
 
     return 0;
 }
