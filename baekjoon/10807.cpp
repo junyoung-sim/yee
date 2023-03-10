@@ -18,7 +18,11 @@ int main()
         std::cin >> v[i];
     std::cin >> T;
 
+    int count = 0;
+    for(int i = 0; i < N; i++)
+        count += (v[i] == T);
     
+    std::cout << count << "\n";
 
     return 0;
 }
