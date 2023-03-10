@@ -23,7 +23,7 @@ int main()
     // (3) must arrive to the last step
 
     for(int i = 3; i <= N; i++)
-        dp[i] = std::max(dp[i-3] + v[i-1] + v[i], dp[i-2] + v[i]);
+        dp[i] = v[i] + std::max(dp[i-3] + v[i-1], dp[i-2]);
     
     std::cout << dp[N] << "\n";
 
