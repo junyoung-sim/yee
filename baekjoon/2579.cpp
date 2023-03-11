@@ -19,7 +19,7 @@ int main()
     }
 
     // (1) can take 1 or 2 steps at a time
-    // (2) cannot take 3 adjacent steps
+    // (2) cannot take 3 adjacent steps in a row
     // (3) must arrive to the last step
 
     for(int i = 3; i <= N; i++)
