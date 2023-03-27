@@ -7,10 +7,10 @@ int main()
     int N;
     std::cin >> N;
 
-    std::vector<std::vector<long long int>> dp(1001, std::vector<long long int>(10));
+    std::vector<std::vector<long long int>> dp(N+1, std::vector<long long int>(10));
     dp[1] = {1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 
-    for(int n = 2; n <= 1000; n++) {
+    for(int n = 2; n <= N; n++) {
         dp[n][0] = 1;
         for(int k = 1; k <= 9; k++)
             dp[n][k] = (dp[n][k-1] + dp[n-1][k]) % 10007;
