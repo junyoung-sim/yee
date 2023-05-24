@@ -19,38 +19,34 @@ int main()
     std::cin >> N;
 
     std::vector<int> v(N);
-    std::map<int, int> freq;
-    int max_freq = -RAND_MAX;
+    std::vector<int> freq(8001, 0); // -4000 ~ 4000
+
+    double sum = 0;
     for(int i = 0; i < N; i++) {
         std::cin >> v[i];
-        max_freq = std::max(++freq[v[i]], max_freq);
+        sum += v[i];   
+        freq[v[i] + 4000]++;
     }
     std::sort(v.begin(), v.end());
 
-    double mean = 0.00;
-    for(int &x: v)
-        mean += x;
-    mean /= N;
-
-    int median = v[N/2];
-
-    v.erase(std::unique(v.begin(), v.end()), v.end());
-
-    std::vector<int> modes;
-    for(int &x: v) {
-        if(freq[x] == max_freq)
-            modes.push_back(x);
-        if(modes.size() > 1)
-            break;
+    int t; int max_freq = 0;
+    for(int i = 0; i <= 8000; i++) {
+        if(freq[i] > max_freq) {
+            t = i;
+            max_freq = freq[i];
+        }
     }
-    int mode = modes[modes.size() != 1];
+    for(int i = t + 1; i <= 8000; i++) {
+        if(freq[i] == max_freq) {
+            t = i;
+            break;
+        }
+    }
 
-    int range = v[N-1] - v[0];
-
-    std::cout << std::round(mean) << "\n";
-    std::cout << median << "\n";
-    std::cout << mode << "\n";
-    std::cout << range << "\n";
+    std::cout << std::round(sum / N) << "\n"; // mean
+    std::cout << v[(N-1)/2] << "\n"; // median
+    std::cout << t - 4000 << "\n";
+    std::cout << v[N-1] - v[0] << "\n"; // range
 
     return 0;
 }
