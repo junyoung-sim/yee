@@ -10,6 +10,7 @@
 #include <set>
 #include <stack>
 #include <queue>
+#include <deque>
 
 int main()
 {
