@@ -1,8 +1,6 @@
 ## Profiles
 
-Baekjoon: https://acmicpc.net/user/jysim
-
-          https://solved.ac/profile/jysim
+Baekjoon: https://acmicpc.net/user/jysim - https://solved.ac/profile/jysim
 
 LeetCode: https://leetcode.com/junyoung-sim/
 
