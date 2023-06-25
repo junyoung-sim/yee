@@ -1,10 +1,11 @@
 ## Profiles
 
-Baekjoon: https://acmicpc.net/user/jysim (https://solved.ac/profile/jysim)
+Baekjoon: https://acmicpc.net/user/jysim
+          https://solved.ac/profile/jysim
 
 LeetCode: https://leetcode.com/junyoung-sim/
 
-## Problem Tags
+## Tags
 ***Baekjoon only (as of Jun 2023)***
 
 1. Mathematics (79)
