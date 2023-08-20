@@ -21,7 +21,22 @@ int main()
     std::string str;
     std::cin >> str;
 
-    
+    std::string num = "";
+    bool minus = false;
+    int ans = 0;
+
+    for(int i = 0; i <= str.length(); i++) {
+        if(str[i] - '0' < 0 || i == str.length()) {
+            if(minus) ans -= std::stoi(num);
+            else ans += std::stoi(num);
+            num = "";
+        }
+        else num += str[i];
+
+        if(!minus) minus = (str[i] == '-');
+    }
+
+    std::cout << ans << "\n";
 
     return 0;
 }
