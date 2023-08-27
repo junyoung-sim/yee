@@ -1,25 +1,23 @@
-## Profiles
-
 Baekjoon: https://acmicpc.net/user/jysim - https://solved.ac/profile/jysim
 
 LeetCode: https://leetcode.com/junyoung-sim/
 
-## Tags
-***Baekjoon only (as of Jun 2023)***
+**Problem Tags (Baekjoon rating ONLY) as of Aug 2023**
 
-1. Mathematics (79)
-2. Implementation (93)
-3. Dynamic Programming (26)
+1. Mathematics (83)
+2. Dynamic Programming (32)
+3. Implementation (93)
 4. Brute Force (24)
 5. Data Structures (23)
-6. Number Theory (19)
-7. Strings (24)
-8. Sorting (18)
-9. Arithmetic (31)
-10. Simulation (11)
-11. Combinatorics (7)
-12. Geometry (8)
-13. Binary Search (2)
-14. Bitmasking (1)
-15. Greedy Algorithm (1)
-16. Case Work (1)
+6. String (26)
+7. Sorting (20)
+8. Number Theory (19)
+9. Arithmetic (32)
+10. Prefix Sum (6)
+11. Greedy Algorithm (6)
+12. Simulation (11)
+13. Combinatorics (7)
+14. Geometry (8)
+15. Binary Search (2)
+16. Bitmasking (1)
+17. Conditional (1)
