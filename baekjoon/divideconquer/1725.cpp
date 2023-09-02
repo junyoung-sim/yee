@@ -25,9 +25,9 @@ int segtree(int a, int b, int n) {
 	if(a == b)
 		return seg[n] = a;
 	int mid = (a + b) / 2;
-	int l = segtree(a, mid, n*2+1);
-	int r = segtree(mid+1, b, n*2+2);
-	return seg[n] = (h[l] < h[r] ? l : r);
+	int lx = segtree(a, mid, n*2+1);
+	int rx = segtree(mid+1, b, n*2+2);
+	return seg[n] = (h[lx] < h[rx] ? lx : rx);
 }
 
 // [a,b]: interval in array
@@ -37,6 +37,7 @@ int argmin(int a, int b, int l, int r, int n) {
 	if(r < a || b < l) return RAND_MAX; // segment tree range out of bounds
 	if(a <= l && r <= b) return seg[n]; // segment tree range in bounds
 
+	// array interval is within segment tree range
 	int mid = (l + r) / 2;
 	int lx = argmin(a, b, l, mid, n*2+1);
 	int rx = argmin(a, b, mid+1, r, n*2+2);
