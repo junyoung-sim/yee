@@ -14,10 +14,10 @@ Solved 230+ coding problems (mostly from Baekjoon) related to essential algortih
 
 [11054](./baekjoon/dp/11054.cpp) Find the longest bitonic sequence using dynamic programming. I just love DP. It's elegant.
 
-[25682](./baekjoon/prefixsum/25682.cpp) Use prefix summation to find the least number of cells that need editing on K x K chess board within a larger N x M chess board. Great example of "work smart, not hard."
+[25682](./baekjoon/prefixsum/25682.cpp) Use prefix summation to find the least number of cells that need editing on a K x K chess board within a larger N x M chess board. Great example of "work smart, not hard."
 
-[1309](./baekjoon/dp/1309.cpp) Use dynamic programming to find the number of possibilities of sheltering lions in a zoo given that they cannot be placed right next to each other. This is one the first DP problems that taught me how to think about finding patterns and writing them into elegant code.
+[1309](./baekjoon/dp/1309.cpp) Use dynamic programming to find the number of possibilities of sheltering lions in a zoo given that they cannot be placed right next to each other. This is one of the first DP problems that taught me how to think about finding patterns and writing them into elegant code.
 
 [2156](./baekjoon/dp/2156.cpp) Another dynamic programming problem for maximizing the amount of wine that can be consumed given that one cannot drink three cups in a row. Simliar learning experience as the problem above.
 
-[14888](./baekjoon/brute/14888.cpp) Find the maximum and minimum value of a equation given the number of operators can be added. Fun backtracking problem.
+[14888](./baekjoon/brute/14888.cpp) Find the maximum and minimum value of a equation given the number and type of operators can be added. Fun backtracking problem.
