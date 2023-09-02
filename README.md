@@ -4,7 +4,7 @@ LeetCode: https://leetcode.com/junyoung-sim/
 
 Solved 230+ coding problems (mostly from Baekjoon) related to essential algortihmic topics, such as data structures, brute force, divide and conquer, dynamic programming, FT, greedy algorithm, number theory, prefix sum, sorting, and more. The following are some of my favorite problems so far.
 
-[1067](./baekjoon/fft/1067.cpp): Use Fast Fourier Transform (FFT) to find the maximum convolution of two arrays that can be circulated. This problem took a lot of time and effort as I had to learn about Taylor/Maclaurin Series and Euler's Formula to understand FFT and its use in performing convolutions.
+[1067](./baekjoon/fft/1067.cpp) Use Fast Fourier Transform (FFT) to find the maximum convolution of two arrays that can be circulated. This problem took a lot of time and effort as I had to learn about Taylor/Maclaurin Series and Euler's Formula to understand FFT and its use in performing convolutions.
 
 [1725](./baekjoon/divideconquer/1725.cpp) Find the maximum rectangle area of a given histogram. I learned about segment trees for efficient range minimum query to solve this problem, though stacks and basic brute force may be used.
 
