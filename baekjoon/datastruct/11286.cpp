@@ -15,11 +15,13 @@
 
 std::vector<long long int> heap;
 
+#define PRIORITY(x1, x2) (abs(x1) < abs(x2) || abs(x1) == abs(x2) && x1 < x2) // x1 has priority if PRIORITY(x1, x2) is true
+
 void shiftdown(int root) {
     while(root*2+1 < heap.size()) {
         long long int child = root*2+1;
-        if(child+1 < heap.size() && heap[child+1] < heap[child]) child++;
-        if(heap[root] > heap[child]) {
+        if(child+1 < heap.size() && PRIORITY(heap[child+1], heap[child])) child++;
+        if(PRIORITY(heap[child], heap[root])) {
             std::swap(heap[root], heap[child]);
             root = child;
         }
@@ -30,16 +32,16 @@ void shiftdown(int root) {
 long long int pop() {
     if(heap.size() == 0)
         return 0;
-    long long int min = heap[0];
+    long long int head = heap[0];
     std::swap(heap.front(), heap.back());
     heap.pop_back(); shiftdown(0);
-    return min;
+    return head;
 }
 
 void insert(long long int x) {
     heap.push_back(x);
     int i = heap.size() - 1;
-    while(i > 0 && heap[i] < heap[(i-1)/2]) {
+    while(i > 0 && PRIORITY(heap[i], heap[(i-1)/2])) {
         std::swap(heap[i], heap[(i-1)/2]);
         i = (i-1)/2;
     }
