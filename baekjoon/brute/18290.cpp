@@ -1,51 +1,60 @@
+#include <bits/stdc++.h>
 #include <iostream>
+#include <cstdlib>
+#include <cstdio>
+#include <string>
 #include <vector>
+#include <random>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <stack>
+#include <queue>
+#include <deque>
 
 int N, M, K;
-std::vector<std::vector<int>> map;
-std::vector<std::vector<int>> step;
+int ans = -RAND_MAX;
 
-int ans = -10001;
+std::vector<std::vector<int>> v;
+std::vector<std::vector<int>> filled;
 
-void func(int i, int j, int sum, int k) {
-    if(k == K) {
-        ans = std::max(sum, ans);
-        return;
-    }
+void solve(int r, int c, int k, int sum) {
+	if(k == K) {
+		ans = std::max(sum, ans);
+		return;
+	}
 
-    step[i][j] = 1;
+	if(c > M) { r++; c = 1; }
+	if(r > N) return;
 
-    int r[4] = {i-1, i-1, i+1, i+1};
-    int c[4] = {j-1, j+1, j-1, j+1};
-
-    for(int n = 0; n < 4; n++) {
-        if(r[n] >= 0 && r[n] < N && c[n] >= 0 && c[n] < M && step[r[n]][c[n]] == 0) {
-            func(r[n], c[n], sum + map[r[n]][c[n]], k+1);
-            step[r[n]][c[n]] = 0;
-        }
-    }
-
-    step[i][j] = 0;
+	int i = r, j = c;
+	while(i <= N) {
+		if(!filled[i-1][j]) {
+			filled[i][j] = 1;
+			solve(i, j+2, k+1, sum+v[i][j]);
+			filled[i][j] = 0;
+		}
+		if(++j > M) { i++; j = 1; }
+	}
 }
 
 int main()
 {
-    std::cin >> N >> M >> K;
-    map.resize(N, std::vector<int>(M));
-    step.resize(N, std::vector<int>(M));
+	std::ios::sync_with_stdio(false);
+	std::cin.tie(NULL);
+	std::cout.tie(NULL);
 
-    for(int i = 0; i < N; i++) {
-        for(int j = 0; j < M; j++) {
-            std::cin >> map[i][j];
-            step[i][j] = 0;
-        }
-    }
+	std::cin >> N >> M >> K;
 
-    for(int i = 0; i < N; i++)
-        for(int j = 0; j < M; j++)
-            func(i, j, map[i][j], 1);
+	v.resize(N+1, std::vector<int>(M+1, 0));
+	filled.resize(N+1, std::vector<int>(M+1, 0));
 
-    std::cout << ans << "\n";
+	for(int i = 1; i <= N; i++)
+		for(int j = 1; j <= M; j++) std::cin >> v[i][j];
 
-    return 0;
+	solve(1, 1, 0, 0);
+	std::cout << ans << "\n";
+
+	return 0;
 }
