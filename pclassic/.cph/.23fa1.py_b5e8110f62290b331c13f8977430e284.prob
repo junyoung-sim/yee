@@ -1,0 +1,1 @@
+{"name":"Local: 23fa1","url":"/home/junyoung/Desktop/CS/yee/pclassic/23fa1.py","tests":[{"id":1701540166016,"input":"PANTALONES","output":"YES"},{"id":1701540176842,"input":"NINCOMPOOP","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/junyoung/Desktop/CS/yee/pclassic/23fa1.py","group":"local","local":true}
