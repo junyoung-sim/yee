@@ -9,7 +9,7 @@ Solved 280+ algorithmic problems. The following are some of my favorite problems
 | BJ | [1067](./baekjoon/1067.cpp) | Use Fast Fourier Transform (FFT) to find the maximum convolution of two arrays that can be circulated. |
 | BJ | [1725](./baekjoon/1725.cpp) | Find the maximum rectangle area of a  histogram by using segment trees for range minimum query. |
 | BJ | [11066](./baekjoon/11066.cpp) | Find the optimal cost of combining a set of files using two-dimensional dynamic programming and prefix summations. |
-| BJ | [14500](./baekjoon/14500.cpp) | Find the maximum sum of values that can be obtained by placing a tetromino on a bgiven given board. |
+| BJ | [14500](./baekjoon/14500.cpp) | Find the maximum sum of values that can be obtained by placing a tetromino on a given board. |
 | BJ | [11444](./baekjoon/11444.cpp) | Compute fibonacci numbers using matrix exponentiation. |
 | BJ | [2580](./baekjoon/2580.cpp) | Brute force a sudoku puzzle. |
 | BJ | [11054](./baekjoon/11054.cpp) | Find the longest bitonic sequence using dynamic programming. |
