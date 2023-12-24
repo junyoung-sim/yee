@@ -25,11 +25,11 @@ int main()
 	for(int i = 1; i <= N; i++)
 		std::cin >> v[i];
 	
-	std::vector<int> dp(N+1);
-	for(int n = 1; n <= N; n++) {
-		dp[n] = v[n];
-		for(int i = 1; i <= n; i++)
-			dp[n] = std::max(dp[n], dp[n-i] + dp[i]);
+	std::vector<int> dp(N+1, 0);
+	for(int i = 1; i <= N; i++) {
+		dp[i] = v[i];
+		for(int k = 1; k <= i; k++)
+			dp[i] = std::min(dp[i], dp[i-k] + dp[k]);
 	}
 
 	std::cout << dp[N] << "\n";
