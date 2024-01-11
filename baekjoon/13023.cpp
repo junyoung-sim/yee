@@ -25,7 +25,6 @@ void dfs(int a, std::vector<std::vector<int>> &graph, std::vector<bool> &visited
 	visited[a] = true;
 	for(int &b: graph[a]) {
 		if(!visited[b]) {
-			visited[b] = true;
 			dfs(b, graph, visited, cnt+1);
 			visited[b] = false;
 		}
