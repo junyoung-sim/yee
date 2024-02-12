@@ -15,30 +15,32 @@
 
 struct pos {
 	int r, c;
-	pos(int i, int j) { r = i; c = j; }
+	pos(int i, int j) {
+		r = i;
+		c = j;
+	}
 };
 
 int N, M;
 std::vector<std::vector<int>> graph;
 
-int dr[4] = {-1,0,1,0};
-int dc[4] = {0,1,0,-1};
+int dr[4] = {-1, 0, 1, 0};
+int dc[4] = {0, 1, 0, -1};
 
 int bfs(int i, int j) {
 	std::queue<pos> q;
 	q.push(pos(i, j));
-
 	while(!q.empty()) {
 		pos x = q.front(); q.pop();
 		int r = x.r, c = x.c;
 		for(int n = 0; n < 4; n++) {
-			if(r+dr[n] >= 0 && r+dr[n] < N && c+dc[n] >= 0 && c+dc[n] < M && graph[r+dr[n]][c+dc[n]] == 1) {
-				graph[r+dr[n]][c+dc[n]] = graph[r][c] + 1;
-				q.push(pos(r+dr[n], c+dc[n]));
+			int pr = r+dr[n], pc = c+dc[n];
+			if(pr >= 0 && pr < N && pc >= 0 && pc < M && graph[r+dr[n]][c+dc[n]] == 1) {
+				graph[pr][pc] = graph[r][c] + 1;
+				q.push(pos(pr, pc));
 			}
 		}
 	}
-
 	return graph[N-1][M-1];
 }
 
