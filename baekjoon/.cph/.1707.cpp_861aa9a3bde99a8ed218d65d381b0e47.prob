@@ -1,0 +1,1 @@
+{"name":"Local: 1707","url":"/home/junyoung/Desktop/CS/yee/baekjoon/1707.cpp","tests":[{"id":1708649753261,"input":"1\n3 2\n1 3\n2 3","output":"YES"},{"id":1708649768802,"input":"1\n4 4\n1 2\n2 3\n3 4\n4 2","output":"NO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/junyoung/Desktop/CS/yee/baekjoon/1707.cpp","group":"local","local":true}
