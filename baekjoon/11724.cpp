@@ -19,6 +19,18 @@ void dfs(int i, std::vector<std::vector<int>> &graph, std::vector<bool> &visit) 
 		if(!visit[j]) dfs(j, graph, visit);
 }
 
+void bfs(int i, std::vector<std::vector<int>> &graph, std::vector<bool> &visit) {
+	std::queue<int> q;
+	q.push(i);
+
+	while(!q.empty()) {
+		int x = q.front(); q.pop();
+		visit[x] = true;
+		for(int &k: graph[x])
+			if(!visit[k]) q.push(k);
+	}
+}
+
 int main()
 {
 	std::ios::sync_with_stdio(false);
@@ -42,6 +54,7 @@ int main()
 	for(int i = 1; i <= N; i++) {
 		if(!visit[i]) {
 			dfs(i, graph, visit);
+			//bfs(i, graph, visit);
 			ans++;
 		}
 	}
