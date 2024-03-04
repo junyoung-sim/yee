@@ -1,0 +1,29 @@
+#include <bits/stdc++.h>
+#include <iostream>
+#include <cstdlib>
+#include <cstdio>
+#include <string>
+#include <vector>
+#include <random>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <set>
+#include <stack>
+#include <queue>
+#include <deque>
+
+int main()
+{
+	std::ios::sync_with_stdio(false);
+	std::cin.tie(NULL);
+	std::cout.tie(NULL);
+
+    std::string input;
+    std::getline(std::cin, input);
+
+    if(input == "Has a stripe") std::cout << "Viceroy";
+    else std::cout << "Monarch";
+	
+	return 0;
+}

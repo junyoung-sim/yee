@@ -1,0 +1,1 @@
+{"name":"Local: yubutterfly","url":"/home/junyoung/Desktop/CS/yee/wicc/yubutterfly.cpp","tests":[{"id":1709488979335,"input":"Has a stripe","output":"Viceroy"},{"id":1709488985120,"input":"Does not have a stripe","output":"Monarch"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/junyoung/Desktop/CS/yee/wicc/yubutterfly.cpp","group":"local","local":true}
