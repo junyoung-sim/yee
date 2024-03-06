@@ -1,0 +1,1 @@
+{"name":"Local: 1520","url":"/home/junyoung/Desktop/CS/yee/baekjoon/1520.cpp","tests":[{"id":1709658394225,"input":"4 5\n50 45 37 32 30\n35 50 40 20 25\n30 30 25 17 28\n27 24 22 15 10","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/junyoung/Desktop/CS/yee/baekjoon/1520.cpp","group":"local","local":true}
