@@ -19,19 +19,6 @@ int N;
 int v[MAX][MAX];
 long long int dp[MAX][MAX];
 
-/*
-int dfs(int i, int j) {
-	if(i == N-1 && j == N-1) return 1;
-	if(v[i][j] == 0) return 0;
-	if(dp[i][j]) return dp[i][j];
-
-	if(i + v[i][j] < N) dp[i][j] += dfs(i + v[i][j], j);
-	if(j + v[i][j] < N) dp[i][j] += dfs(i, j + v[i][j]);
-
-	return dp[i][j];
-}
-*/
-
 int main()
 {
 	std::ios::sync_with_stdio(false);
@@ -56,8 +43,6 @@ int main()
 	}
 
 	std::cout << dp[N-1][N-1];
-
-	//std::cout << dfs(0, 0);
 	
 	return 0;
 }
