@@ -1,0 +1,1 @@
+{"name":"Local: 2629","url":"/home/junyoung/Desktop/CS/yee/baekjoon/2629.cpp","tests":[{"id":1711899786447,"input":"2\n1 4\n2\n3 2","output":"Y N"},{"id":1711899794919,"input":"4\n2 3 3 3\n3\n1 4 10","output":"Y Y N"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/junyoung/Desktop/CS/yee/baekjoon/2629.cpp","group":"local","local":true}
